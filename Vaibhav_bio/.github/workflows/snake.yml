@@ -1,4 +1,4 @@
-name: Generate Contribution Animations
+name: Generate Contribution Snake
 
 on:
   schedule:
@@ -15,17 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Generate Pac-Man Contribution Graph
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          background_color: "#0d0b14"
-
       - name: Generate Snake Animation
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Tip (optional): to make the snake/dots match your #F97316 theme
+          # instead of GitHub's default green, replace the dark line with:
+          # dist/github-contribution-grid-snake-dark.svg?color_snake=%23f5f5f5&color_dots=%23161616,%237c2d12,%23c2410c,%23ea580c,%23F97316
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
