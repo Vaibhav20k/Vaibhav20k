@@ -1,4 +1,4 @@
-name: Generate Contribution Snake
+name: Generate Profile Cards
 
 on:
   schedule:
@@ -19,14 +19,33 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          # Tip (optional): to make the snake/dots match your #F97316 theme
-          # instead of GitHub's default green, replace the dark line with:
-          # dist/github-contribution-grid-snake-dark.svg?color_snake=%23f5f5f5&color_dots=%23161616,%237c2d12,%23c2410c,%23ea580c,%23F97316
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Generate Stats Card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          # count_private=true only works if token below has cross-repo
+          # read access — GITHUB_TOKEN can't see your other private repos,
+          # so private contributions won't be counted until you swap in a
+          # PAT (repo, read:user scopes) stored as a secret instead.
+          options: "username=${{ github.repository_owner }}&show_icons=true&hide_border=true&bg_color=0d0b14&title_color=F97316&icon_color=F97316&text_color=f5f5f5&include_all_commits=true&count_private=true"
+          path: dist/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Generate Top Languages Card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: "username=${{ github.repository_owner }}&layout=compact&hide_border=true&bg_color=0d0b14&title_color=F97316&text_color=f5f5f5"
+          path: dist/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
 
       - name: Push to output branch
