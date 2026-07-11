@@ -5,9 +5,7 @@
 <br/>
 
 [![Profile Views](https://komarev.com/ghpvc/?username=Vaibhav20k&label=views&color=F97316&style=flat-square)](https://github.com/Vaibhav20k)
-
 [![Repos](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FVaibhav20k&query=%24.public_repos&suffix=%2B+repos&label=&style=flat-square&color=161616&labelColor=161616&logo=github&logoColor=F97316)](https://github.com/Vaibhav20k?tab=repositories)
-
 [![Followers](https://img.shields.io/github/followers/Vaibhav20k?label=followers&style=flat-square&color=161616&labelColor=161616&logo=github&logoColor=F97316)](https://github.com/Vaibhav20k?tab=followers)
 
 </div>
