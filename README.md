@@ -136,14 +136,16 @@ learning:
 
 <a href="https://github.com/Vaibhav20k">
 <img height="170em"
-src="https://github-readme-stats.vercel.app/api?username=Vaibhav20k&show_icons=true&hide_border=true&bg_color=0d0b14&title_color=F97316&icon_color=F97316&text_color=f5f5f5&include_all_commits=true&count_private=true"/>
+alt="Vaibhav's GitHub stats"
+src="https://raw.githubusercontent.com/Vaibhav20k/Vaibhav20k/output/stats.svg"/>
 
 </a>
 
 <a href="https://github.com/Vaibhav20k">
 
 <img height="170em"
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vaibhav20k&layout=compact&hide_border=true&bg_color=0d0b14&title_color=F97316&text_color=f5f5f5"/>
+alt="Vaibhav's most used languages"
+src="https://raw.githubusercontent.com/Vaibhav20k/Vaibhav20k/output/top-langs.svg"/>
 
 </a>
 
